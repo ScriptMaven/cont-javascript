@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <button class="button1">Добавить</button>
+        <button class="button2">Удалить</button>
+        <button class="button3">Hover</button>
+    </div>
+    <script>
+        const button1El = document.querySelector('.button1');
+        const button2El = document.querySelector('.button2');
+        const button3El = document.querySelector('.button3');
+
+        const h1El = document.createElement('h1');
+        h1El.textContent = 'Новый заголовок';
+        button1El.addEventListener('click', function (e) {
+            button1El.parentElement.appendChild(h1El);
+        });
+
+        button2El.addEventListener('click', function (e) {
+            button2El.parentElement.removeChild(h1El);
+        });
+
+        button3El.addEventListener('mouseover', function (e) {
+            console.log('Навели');
+            console.log(e.target);
+        });
+
+        button3El.addEventListener('mouseout', function (e) {
+            console.log('Убрали');
+        });
+
+    </script>
+</body>
+</html>

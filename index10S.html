@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="cart-box"></div>
+    <!-- <div class="item">
+      <img src="img/product1.jpg" alt="товар 1" />
+      <div class="item__content">
+        <h3 class="item__heading">MANGO PEOPLE T-SHIRT</h3>
+        <p class="item__text">Price: <span class="item_color">$300</span></p>
+        <p class="item__text">Color: Red</p>
+        <p class="item__text">Size: Xl</p>
+        <div class="item__text">
+          Quantity: <input class="item__input" type="text" value="2" />
+        </div>
+      </div>
+    </div> -->
+    <script src="dataa.js"></script>
+
+    <script>
+      const data = JSON.parse(dataProducts);
+
+      const cartBox = document.querySelector(".cart-box");
+
+        data.forEach((element) => {
+        const itemEl = document.createElement("div");
+        itemEl.classList.add("item");
+
+        const itemImg = document.createElement("img");
+        itemImg.src = element.url;
+
+        const itemContent = document.createElement("div");
+        itemContent.classList.add("item__content");
+
+        const itemHeading = document.createElement("h3");
+        itemHeading.classList.add("item__heading");
+        itemHeading.textContent = element.name;
+
+        const itemPrice = document.createElement("p");
+        itemPrice.classList.add("item__text");
+        itemPrice.textContent = 'Price:';
+
+        const itemSelect = document.createElement("span");
+        itemSelect.classList.add("item_color");
+        itemSelect.textContent = `$${element.price}`;
+
+        const itemColor = document.createElement("p");
+        itemColor.classList.add("item__text");
+        itemColor.textContent = `Size: ${element.size}`;
+
+        const itemQuantity = document.createElement("p");
+        itemQuantity.classList.add("item__text");
+        itemQuantity.textContent = 'Quantity: ';
+
+        const itemInput = document.createElement('input');
+        itemInput.classList.add("item__input");
+        itemInput.setAttribute('value', 1);
+
+        cartBox.appendChild(itemEl);
+        itemEl.appendChild(itemImg);
+        itemEl.appendChild(itemContent);
+        itemContent.appendChild(itemHeading);
+        itemContent.appendChild(itemPrice);
+        itemPrice.appendChild(itemSelect);
+        itemContent.appendChild(itemColor);
+        itemContent.appendChild(itemQuantity);
+        itemQuantity.appendChild(itemInput);
+
+
+      });
+    </script>
+
+  </body>
+</html>

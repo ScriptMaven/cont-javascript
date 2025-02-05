@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="button">1</button>
+    <button class="button">2</button>
+    <button class="button">3</button>
+    <button class="button2">4</button>
+    <button class="button3">5</button>
+    <script>
+      const buttons = document.querySelectorAll(".button");
+
+      buttons.forEach(element => {
+        element.addEventListener("click", function(e) {
+            const target = e.target;
+            console.log(target);
+        });
+      });
+
+      const button2El = document.querySelector('.button2');
+
+      let count = 0;
+
+      button2El.addEventListener('click', function (e) {
+        console.log(++count);
+      });
+
+      const button3El = document.querySelector('.button3');
+
+      button3El.addEventListener('click', function (e) {
+        button3El.textContent = 'Вы нажали на эту кнопку';
+        
+      });
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cat__img {
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content"></div>
+    <script src="data.js"></script>
+    <script>
+        const contentEl = document.querySelector('.content');
+        const data = JSON.parse(dataCat);
+
+        data.forEach(element => {
+            const catBox = document.createElement('div');
+            catBox.classList.add('cat');
+            const h2El = document.createElement('h2');
+            h2El.classList.add('cat__title');
+            h2El.textContent = element.breed;
+
+            const pEl = document.createElement('p');
+            pEl.classList.add('cat__country');
+            pEl.textContent = element.country;
+
+            imgEl = document.createElement('img');
+            imgEl.classList.add('cat__img');
+            imgEl.src = element.url;
+
+            contentEl.appendChild(catBox);
+            catBox.appendChild(h2El);
+            catBox.appendChild(pEl);
+            catBox.appendChild(imgEl);
+
+        });
+        
+    </script>
+</body>
+</html>

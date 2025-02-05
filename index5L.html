@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <button class="button">Купить 1</button>
+    <button class="button">Купить 2</button>
+    <button class="button">Купить 3</button> -->
+    <!-- ----------------------------------------------------- -->
+    <!-- <ul class="menu">
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul> -->
+    <!-- ----------------------------------------------------- -->
+    <!-- <h1>Lorem, ipsum dolor.</h1> -->
+    <!-- ----------------------------------------------------- -->
+    <!-- <button class="button">Купить</button> -->
+    <!-- ----------------------------------------------------- -->
+    <!-- <a href="https://ya.ru/" class="link">yandex</a> -->
+    <!-- ----------------------------------------------------- -->
+    <!-- <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique eos
+      dolores, laudantium consectetur optio nisi quasi perspiciatis ipsam
+      officia aliquid!
+    </p> -->
+    <!-- ----------------------------------------------------- -->
+    <!-- <input type="text"> -->
+    <!-- ----------------------------------------------------- -->
+    <form action="#">
+      <input type="text" class="input">
+      <div class="error"></div>
+      <button type="submit">GO</button>
+    </form>
+    <script>
+      // const buttonEl = document.querySelector('.button');
+      // let count = 0;
+      // let counter = 0;
+
+      // const click = function () {
+      //     console.log('Click js button');
+      //     count ++;
+      //     console.log(`Кликов по кнопке ${count}`);
+      // }
+
+      // // buttonEl.onclick = click;
+
+      // buttonEl.addEventListener('click', click );
+
+      // buttonEl.addEventListener('click', function (e) {
+      //     console.log('click add');
+      // });
+
+      // buttonEl.addEventListener('click', function (e) {
+      //     console.log('click add 2');
+      // });
+      //------------------------------------------------------------------//
+      // const buttonEls = document.querySelectorAll('.button');
+
+      // buttonEls.forEach(element => {
+      //   element.addEventListener('click', function (event) {
+      //     const target = event.target;
+      //   console.log(target);
+      // });
+      // });
+      //------------------------------------------------------------------//
+      // const menuEL = document.querySelector('.menu');
+
+      // const nameFunction = (e) => {
+      //   console.log(e.target, e.currentTarget);
+      // }
+
+      // menuEL.addEventListener('click', nameFunction);
+
+      //------------------------------------------------------------------//
+      // document.addEventListener('DOMContentLoaded', function (e) {
+      //   console.log('loaded');
+      // });
+
+      // window.addEventListener('load', function (e) {
+      //   console.log('все загрузилось');
+      // });
+      //------------------------------------------------------------------//
+      // const buttonEl = document.querySelector('.button');
+
+      // buttonEl.addEventListener('mouseover', function (e) {
+      //   console.log('Не нужно наводить, ты лучше нажми');
+      // });
+
+      // buttonEl.addEventListener('mouseleave', function (e) {
+      //   console.log('Не нужно убегать');
+      // });
+      //------------------------------------------------------------------//
+      // window.addEventListener('keydown', function (e) {
+      //   // console.log(e);
+      //   console.log(e.key);
+      // });
+      // // keyup, keypress
+      //------------------------------------------------------------------//
+      // const link = document.querySelector('.link');
+
+      // link.addEventListener('click', function (e) {
+      //   e.preventDefault();
+      //   console.log('hello link');
+      // });
+      //------------------------------------------------------------------//
+      // document.addEventListener("copy", function (e) {
+      //   const copyText = document.getSelection().toString();
+      //   console.log(copyText);
+      // });
+      //------------------------------------------------------------------//
+      // window.addEventListener('resize', function (e) {
+      //   console.log('resize');
+      // });
+      //------------------------------------------------------------------//
+      // const inputEl = document.querySelector('input');
+
+      // inputEl.addEventListener('input', (event) => {
+      //   if (Number(event.target.value) === 123) {
+      //     console.log('Верно');
+      //   } else {
+      //     console.log('Не угадал');
+      //   }
+      // });
+      //------------------------------------------------------------------//
+      const inputText = document.querySelector('input');
+      const formRun = document.querySelector('form');
+      const errorEl = document.querySelector('.error');
+
+      formRun.addEventListener('submit', (event) => {
+        if (inputText.value === '') {
+          event.preventDefault();
+          errorEl.textContent = 'Поле не должно быть пустым'
+        }
+      });
+    </script>
+  </body>
+</html>

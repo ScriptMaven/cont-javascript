@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="block">
+      <p>1</p>
+      <p>2</p>
+    </div>
+
+    <p class="www">text 1</p>
+    <p class="www">text 2</p>
+
+    <a class="link" href="#">link text html</a>
+
+    <img class="photo" src=" " alt="" />
+
+    <div class="content"></div>
+    <script>
+      const p1El = document.querySelector("#block p:first-child");
+      console.log(p1El);
+
+      const wwwEl = document.querySelector(".www:first-of-type");
+      console.log(wwwEl);
+
+      const linkEl = document.querySelector(".link");
+      linkEl.textContent = "link text js";
+      linkEl.href = "https://developer.mozilla.org/ru";
+      const imgEl = document.querySelector(".photo");
+      imgEl.src =
+        "https://img.freepik.com/premium-photo/looking-up-new-york-city-skyscrapers-usa_639785-67645.jpg?w=740";
+
+      const divEl = document.querySelector(".content");
+      console.log(divEl);
+      const paragraphEl = document.createElement("p");
+      paragraphEl.textContent = "Новый текстовый элемент";
+      divEl.appendChild(paragraphEl);
+      divEl.removeChild(paragraphEl);
+    //   paragraphEl.remove();
+
+    // const btnEl = document.createElement('button');
+    // btnEl.textContent = 'Click';
+    // divEl.appendChild(btnEl);
+    //     let countClicks = 0;
+    // // btnEl.onclick = function () {
+    // //     console.log(++countClicks);
+    // // }
+    // btnEl.addEventListener('click', function (e) {
+    //     console.log(++countClicks);
+    // });
+
+    const buttonElem = document.createElement('button');
+    divEl.appendChild(buttonElem);
+    buttonElem.textContent = 'Отправить';
+        let countClicks = 0;
+    buttonElem.onclick = function () {
+        // ++countClicks;
+        // if (countClicks === 1) {
+            buttonElem.textContent = 'Текст отправлен';
+        // }
+    }
+
+   
+
+    </script>
+  </body>
+</html>

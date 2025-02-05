@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="form" action="#">
+      <h2>Форма</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
+        fugiat est nihil repudiandae hic perferendis praesentium. Vero ipsa
+        eaque amet.
+      </p>
+      <input id="checkbox" type="checkbox" class="check" />
+      <label for="checkbox">Согласен с условиями</label>
+      <div class="error"></div>
+      <button type="submit">Отправить</button>
+    </form>
+
+    <script>
+      const inputEl = document.querySelector(".check");
+      const formEl = document.querySelector('.form');
+      const errorEl = formEl.querySelector('.error');
+      inputEl.addEventListener("click", function (e) {
+        const target = e.target;
+        console.log(target.checked);
+      });
+
+      formEl.addEventListener('submit', function (e) {
+        console.log(inputEl.checked ? 'Молодец' : 'Выбрать чекбокс');
+      });
+    </script>
+  </body>
+</html>

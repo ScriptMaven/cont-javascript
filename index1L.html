@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- <button class="btn">Купить</button>
+<div class="content"></div>
+<img class="img" src="photo.jpg" alt="photo">
+<script>
+    const buttonEl = document.querySelector('.btn');
+    const contentEl = document.querySelector('.content');
+    const imgEl = document.querySelector('.img');
+    
+    imgEl.onclick = function () {
+        imgEl.src = 'newphoto.jpg';
+    }
+     
+    const textEl = document.createElement('p');
+    textEl.textContent = 'Тут любой текст и его много';
+
+    buttonEl.onclick = function () {
+        buttonEl.textContent = 'Товар в корзине';
+        contentEl.appendChild(textEl);
+    }
+
+</script> -->
+    <!-- <section>
+      <p>
+        Пример текстовой ноды со
+        <a id="myLink" href="https://example.com">ссылкой</a>
+      </p>
+      <img src="image.png" alt="Image example" />
+    </section> -->
+
+    <!-- <script>
+        const sectionElement = document.querySelector('section');
+
+        const paragraphElement = document.createElement('p');
+        paragraphElement.textContent = 'Новый текст параграфа';
+
+        sectionElement.appendChild(paragraphElement);
+
+        const paragraphElementText = document.createTextNode('Содержимое текстовой ноды');
+        paragraphElement.appendChild(paragraphElementText);
+    </script> -->
+
+    <!-- <script>
+      const sectionElement = document.querySelector("section");
+      const sectionElementClone = sectionElement.cloneNode(true);
+      const link = sectionElementClone.querySelector("#myLink");
+      link.id = "myLinkClone";
+      document.body.appendChild(sectionElementClone);
+    </script>
+
+    <script>
+    const sectionElementClone2 = document.querySelectorAll('section')[1];
+    sectionElementClone2.parentNode.removeChild(sectionElementClone2);
+    // sectionElementClone2.remove();
+    </script> -->
+
+    <!-- <script>
+      const divElement = document.createElement("div");
+      const paragraphElement = document.createElement("p");
+      divElement.appendChild(paragraphElement);
+
+      const spanElement = document.createElement("span");
+      const strongElement = document.createElement("strong");
+      paragraphElement.replaceWith(spanElement, strongElement);
+      console.log(divElement.outerHTML);
+    </script> -->
+
+    <div class="product">
+      <img
+        class="product__img"
+        width="250"
+        height="350"
+        src="img/photo1.jpg"
+        alt="photo product"
+      />
+      <h3>Название футболки</h3>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi,
+        reiciendis!
+      </p>
+      <button class="button">Купить</button>
+    </div>
+    <script>
+      const buttonEl = document.querySelector(".button");
+      const productImg = document.querySelector(".product__img");
+      productImg.onclick = function () {
+        productImg.src = "img/photo2.jpg";
+      };
+      buttonEl.onclick = function () {
+        buttonEl.textContent = "Товар добавлен в корзину";
+      };
+    </script>
+  </body>
+</html>

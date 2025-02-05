@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="button">Кнопка</button>
+    <script>
+        const buttonEl = document.querySelector('.button');
+        const bodyEl = document.querySelector('body');
+
+        // bodyEl.onload = function () {      // более архаичный вариант
+        //     console.log('загрузилось');
+        // }
+        
+        window.addEventListener('load', function (event) {  //более современный вариант
+            console.log('страница загрузилась');
+        });
+
+        // buttonEl.onclick = function() {         // нерациональный вариант
+        //     console.log('событие onclick');
+        // };
+
+        buttonEl.addEventListener('click', function (e) {       //современный вариант
+            console.log('click add click');
+        });
+
+        buttonEl.addEventListener('click', function (e) {
+            console.log('click add click 2');
+        });
+
+        // buttonEl.addEventListener('click', () => {        // мой вариант
+        //     console.log('событие addEventListener');
+        // });
+
+        
+    </script>
+</body>
+</html>

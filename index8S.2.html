@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="content">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit id
+        pariatur quas modi, obcaecati nemo ut iste quisquam quae alias!
+      </p>
+      <div class="content__agree">
+        <input type="radio" class="radio" id="tea" name="beverages" checked/>
+        <label for="tea">Чай</label>
+        <input type="radio" class="radio" id="Coffee" name="beverages" />
+        <label for="Coffee">Coffee</label>
+      </div>
+      <button class="button">Отправить</button>
+    </div>
+
+    <script>
+        const boxAgree = document.querySelector('.content__agree');
+        const radioButtons = document.querySelectorAll('.radio');
+        
+        const buttonEl = document.querySelector('.button');
+        const h2El = document.createElement('h2');
+        h2El.textContent = 'Нужно выбрать напиток';
+
+        buttonEl.addEventListener('click', function (e) {
+            radioButtons.forEach(element => {
+                if (element.checked) {
+                    h2El.textContent = `${element.nextElementSibling.textContent} нет`;
+                    boxAgree.appendChild(h2El);
+                } 
+            });
+        });
+
+        radioButtons.forEach(element => {
+            element.addEventListener('change', function (e) {
+                if (element.checked) {
+                    h2El.textContent = `${element.nextElementSibling.textContent} нет`;
+                    boxAgree.appendChild(h2El);
+                }
+            });
+        });
+    </script>
+  </body>
+</html>

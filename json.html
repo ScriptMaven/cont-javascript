@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content"></div>
+    <script src="json.js"></script>
+    <script>
+        const usersData = JSON.parse(data);
+        console.log(usersData);
+
+        const contentEl = document.querySelector('.content');
+        contentEl.textContent = `Это данные из json ${usersData.guest.name}`;
+    </script>
+</body>
+</html>

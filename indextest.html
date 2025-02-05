@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Здравствуй, мир!</title>
+</head>
+<body>
+<div style="width: 50%">
+<div style="width: 50%">Здравствуй, мир!</div>
+</div>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <pre id="rabbit">
+    |\ /|
+    \|_|/
+    /. .\
+   =\_Y_/=
+    {>o<}
+  </pre
+    >
+    <button>Спрятать кролика</button>
+    <script>
+      const rabbit = document.querySelector("#rabbit");
+      const button = document.querySelector("button");
+      rabbit.addEventListener("hide", (event) => {
+        if (confirm("Вызвать event.preventDefault()?")) {
+          event.preventDefault();
+        }
+      });
+      button.addEventListener('click', () => {
+        const event = new CustomEvent("hide", { cancelable: true });
+        const defaultPrevented = !rabbit.dispatchEvent(event);
+        if (defaultPrevented) {
+          console.log("Отменено обработчиком события");
+        } else {
+          rabbit.hidden = true;
+        }
+      });
+    </script>
+  </body>
+</html> -->

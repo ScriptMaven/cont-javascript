@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cotent">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Dolores ducimus odit asperiores. Ut eaque, magni quibusdam earum tempore eius fuga.</p>
+        <div class="content__agree">
+        <input type="checkbox" class="check" id="check" checked>
+        <label for="check">Согласен с условиями</label>
+        </div>
+        
+        <button class="button">Отправить</button>
+    </div>
+    
+
+    <script>
+        const boxAgree = document.querySelector('.content__agree');
+        const checkEl = boxAgree.querySelector('.check');
+        const buttonEl = document.querySelector('.button');
+        const h2El = document.createElement('h2');
+        h2El.textContent = 'Нужно выставить согласен';
+
+        buttonEl.addEventListener('click', function (e) {
+            if (!checkEl.checked) {
+                boxAgree.appendChild(h2El);
+            } else {
+                boxAgree.removeChild(h2El);
+            }
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="dropdown">Привет :)</p>
+    <div class="dropdown">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Dropdown button
+      </button>
+      <div class="menu dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+
+    <script>
+      // 1
+      document.querySelectorAll(".dropdown-item").forEach(function (element) {
+        element.classList.add("super-dropdown");
+      });
+
+      // 2
+      const btnEl = document.querySelector(".btn");
+      btnEl.classList.remove("btn-secondary");
+
+      // 3
+      const menuEl = document.querySelector(".menu");
+      menuEl.classList.remove("dropdown-menu");
+
+      // 4
+      const dropdownEl = document.querySelector("div.dropdown");
+      dropdownEl.insertAdjacentHTML("afterend", '<a href="#">link</a>');
+
+      // 5
+      const dropdownMenuButtonEl = document.getElementById("dropdownMenuButton");
+      dropdownMenuButtonEl.id = "superDropdown";
+
+      // 6
+      const dropdownMenu = document.querySelector('[aria-labelledby="dropdownMenuButton"]');
+      dropdownMenu.dataset.dd = 3;
+
+      // 7
+      const dropdownToggle = document.querySelector(".dropdown-toggle");
+      dropdownToggle.removeAttribute("type");
+    </script>
+  </body>
+</html>

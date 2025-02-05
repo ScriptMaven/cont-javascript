@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Laboriosam fugit voluptatibus omnis velit pariatur nulla magnam sunt expedita, ab possimus?</p>
+        <input type="text" class="pass">
+        <button class="button">Отправить</button>
+    </div>
+
+    <script>
+        const boxAgree = document.querySelector('.content');
+        const passEl = document.querySelector('.pass');
+
+        const buttonEl = document.querySelector('.button');
+        const h2El = document.createElement('h2');
+        h2El.textContent = 'Пароль неверный';
+
+        passEl.addEventListener('input', function (e) {
+            if (passEl.value === 'пароль') {
+                passEl.style.border = '1px solid green';
+                boxAgree.removeChild(h2El);
+            } else {
+                passEl.style.border = '1px solid red';
+                boxAgree.appendChild(h2El);
+            }
+        });
+    </script>
+</body>
+</html>
